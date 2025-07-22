@@ -1,0 +1,157 @@
+h2.section-title {
+  text-align: center;
+  font-size: 2.6rem;
+  color: #7c4bd2;
+  margin-bottom: 60px;
+  font-weight: 700;
+  letter-spacing: -0.5px;
+  justify-content: center;
+}
+
+.card-row {
+  display: flex;
+  gap: 40px;
+  justify-content: center;
+  flex-wrap: nowrap;
+  overflow-x: auto;
+  padding-bottom: 20px;
+  scrollbar-width: none; /* Firefox */
+}
+
+.card-row::-webkit-scrollbar {
+  display: none; /* Chrome, Safari */
+}
+
+.card-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex-shrink: 0;
+  width: 280px;
+  transition: transform 0.3s ease;
+}
+
+.card {
+  width: 280px;
+  height: 280px;
+  border-radius: 50%;
+  background: #ffffff;
+  border: 2px solid #eee4f8;
+  box-shadow: 0 10px 30px rgba(124, 75, 210, 0.08);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  padding: 16px;
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  box-sizing: border-box;
+  overflow: hidden;
+}
+
+.card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 16px 36px rgba(124, 75, 210, 0.18);
+}
+
+.card img {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid #dcdcdc;
+  margin-bottom: 12px;
+  transition: transform 0.3s ease;
+}
+
+.card:hover img {
+  transform: scale(1.05);
+}
+
+.badge {
+  display: inline-block;
+  padding: 6px 14px;
+  font-size: 13px;
+  font-weight: 600;
+  background: linear-gradient(135deg, #7c4bd2, #d06fa5);
+  border-radius: 20px;
+  margin-bottom: 8px;
+  box-shadow: 0 2px 6px rgba(124, 75, 210, 0.2);
+}
+
+.badge a {
+  color: #fff;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.card h3 {
+  font-size: 1.05rem;
+  color: #4a2d86;
+  margin: 0;
+  line-height: 1.25;
+  word-wrap: break-word;
+  max-width: 90%;
+  font-weight: 600;
+  transition: color 0.3s ease;
+}
+
+.card:hover h3 {
+  color: #7c4bd2;
+}
+
+/* Description below circle — hidden by default */
+.card-description {
+  font-size: 0.85rem;
+  color: #555;
+  max-width: 240px;
+  text-align: center;
+  margin-top: 14px;
+  line-height: 1.5;
+  display: none;
+  transition: opacity 0.3s ease;
+}
+
+.card-container:hover .card-description {
+  display: block;
+  animation: fadeIn 0.4s ease forwards;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-6px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Tablet and below */
+@media (max-width: 1200px) {
+  .card-row {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 32px;
+  }
+
+  .card {
+    margin-bottom: 20px;
+  }
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+  h2.section-title {
+    font-size: 2rem;
+  }
+
+  .card h3 {
+    font-size: 0.95rem;
+  }
+
+  .card-description {
+    font-size: 0.75rem;
+  }
+}
