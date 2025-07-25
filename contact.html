@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="css/main.css">
-  <title>Thank You
+  <title>Contact Us
   </title>
 </head>
 <body>
@@ -37,9 +37,38 @@
     </ul>
   </nav>
 </header>
- <div class="thank-you-wrapper">
-  <div class="thank-you-circle">Thank You!</div>
-</div>
+   <h2>Contact Us</h2>
+
+  <form class="contact-form" action="#" method="POST">
+    <div class="form-group">
+      <input type="text" name="name" required />
+      <label>Your Name</label>
+    </div>
+
+    <div class="form-group">
+      <input type="email" name="email" required />
+      <label>Your Email</label>
+    </div>
+
+    <div class="form-group">
+      <input type="text" name="subject" />
+      <label>Subject</label>
+    </div>
+
+    <div class="form-group">
+      <textarea name="message" rows="5" required></textarea>
+      <label>Your Message</label>
+    </div>
+
+    <button type="submit">Send Message →</button>
+  </form>
+
+  <!-- ✅ Success Message -->
+  <div class="success-message" id="successMessage">
+    ✅ Your message has been sent. Thank you!
+  </div>
+</section>
+
   <footer class="footer">
   <div class="footer-container">
       <div class="footer-left"><a href="index.html"><img class="logo" src="image/Theraconnect (1).png"></a></div>

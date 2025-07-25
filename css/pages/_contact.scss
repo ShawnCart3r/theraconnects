@@ -1,0 +1,133 @@
+.contact-section {
+  max-width: 600px;
+  margin: 4rem auto;
+  padding: 2rem;
+  background: white;
+  border-radius: 20px;
+  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.08);
+  text-align: center;
+}
+
+.contact-section h2 {
+  font-size: 32px;
+  margin-bottom: 1.5rem;
+  color: #0073aa;
+}
+
+/* === Form Layout === */
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  position: relative;
+}
+
+.form-group {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+}
+
+.contact-form input,
+.contact-form textarea {
+  width: 100%;
+  font-size: 16px;
+  padding: 16px 14px;
+  border: 2px solid #ccc;
+  border-radius: 10px;
+  outline: none;
+  background: transparent;
+  font-family: inherit;
+  transition: border 0.3s ease;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+  border-color: #0073aa;
+}
+
+/* === Floating Label === */
+.form-group label {
+  position: absolute;
+  top: 14px;
+  left: 16px;
+  color: #888;
+  font-size: 14px;
+  pointer-events: none;
+  background: white;
+  padding: 0 4px;
+  transition: 0.3s ease;
+}
+
+.contact-form input:focus + label,
+.contact-form input:valid + label,
+.contact-form textarea:focus + label,
+.contact-form textarea:valid + label {
+  top: -10px;
+  left: 12px;
+  font-size: 12px;
+  color: #0073aa;
+}
+
+/* === Submit Button === */
+.contact-form button {
+  background-color: #0073aa;
+  color: white;
+  padding: 14px 20px;
+  font-size: 16px;
+  font-weight: bold;
+  border: none;
+  border-radius: 999px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 10px rgba(0, 115, 170, 0.25);
+}
+
+.contact-form button:hover {
+  background-color: #005f8e;
+  transform: scale(1.03);
+  box-shadow: 0 6px 18px rgba(0, 115, 170, 0.35);
+}
+
+/* === Success Message Styling === */
+.success-message {
+  display: none;
+  margin-top: 1.5rem;
+  padding: 1rem 1.5rem;
+  background-color: #e6f9f0;
+  color: #22794d;
+  border: 1px solid #b7efd6;
+  border-radius: 12px;
+  font-weight: 600;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  transition: opacity 0.5s ease, transform 0.5s ease;
+  opacity: 0;
+  transform: translateY(10px);
+}
+
+.success-message.visible {
+  display: block;
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* === Responsive Enhancements === */
+@media (max-width: 600px) {
+  .contact-section {
+    padding: 1.5rem;
+  }
+
+  .contact-section h2 {
+    font-size: 24px;
+  }
+
+  .contact-form input,
+  .contact-form textarea {
+    font-size: 15px;
+  }
+
+  .contact-form button {
+    font-size: 14px;
+    padding: 12px 16px;
+  }
+}

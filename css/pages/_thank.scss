@@ -1,0 +1,53 @@
+.thank-you-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background: linear-gradient(135deg, #f0f0f0, #ffffff);
+  padding: 2rem;
+}
+
+/* === Circle with animation === */
+.thank-you-circle {
+  width: 250px;
+  height: 250px;
+  background: #111;
+  color: #fff;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 2rem;
+  font-weight: 700;
+  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.2);
+  animation: popIn 1s ease-out forwards;
+  transform: scale(0.8);
+  opacity: 0;
+  text-align: center;
+  padding: 1rem;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Optional hover glow */
+.thank-you-circle:hover {
+  transform: scale(1.05);
+  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.3);
+}
+
+/* === Animation keyframes === */
+@keyframes popIn {
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+/* === Mobile adjustments === */
+@media (max-width: 480px) {
+  .thank-you-circle {
+    width: 180px;
+    height: 180px;
+    font-size: 1.5rem;
+    padding: 0.5rem;
+  }
+}
